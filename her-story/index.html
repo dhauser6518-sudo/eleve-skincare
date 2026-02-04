@@ -13,6 +13,10 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '909432778274539');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+        content_name: 'Eleve Advertorial',
+        content_category: 'Neck Firming Cream'
+    });
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=909432778274539&ev=PageView&noscript=1"
@@ -674,6 +678,22 @@
             </a>
         </div>
     </div>
+
+    <!-- Meta Pixel: fbclid passthrough to sales page -->
+    <script>
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fbclid = urlParams.get('fbclid');
+        
+        if (fbclid) {
+            document.querySelectorAll('a[href*="/ordernow"]').forEach(link => {
+                const url = new URL(link.href, window.location.origin);
+                url.searchParams.set('fbclid', fbclid);
+                link.href = url.toString();
+            });
+        }
+    })();
+    </script>
 
 </body>
 </html>

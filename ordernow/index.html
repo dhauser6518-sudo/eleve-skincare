@@ -13,6 +13,10 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '909432778274539');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+        content_name: 'Eleve Sales Page',
+        content_category: 'Neck Firming Cream'
+    });
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=909432778274539&ev=PageView&noscript=1"
@@ -1877,6 +1881,31 @@
                 });
             });
         }
+
+        // Meta Pixel: InitiateCheckout + fbclid passthrough
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fbclid = urlParams.get('fbclid');
+            
+            // Find all checkout links and add tracking
+            document.querySelectorAll('a[href*="shop.tryeleve.co"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Fire InitiateCheckout event
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: 'Eleve Neck Firming Cream',
+                        content_category: 'Neck Firming Cream',
+                        currency: 'USD'
+                    });
+                    
+                    // Append fbclid to checkout URL if present
+                    if (fbclid) {
+                        const url = new URL(this.href);
+                        url.searchParams.set('fbclid', fbclid);
+                        this.href = url.toString();
+                    }
+                });
+            });
+        })();
     </script>
 </body>
 </html>
