@@ -216,6 +216,16 @@
             0%, 100% { d: path("M25 50 Q37 45 50 50 Q63 55 75 50"); opacity: 0.3; }
             50% { d: path("M25 50 Q37 52 50 50 Q63 48 75 50"); opacity: 0.7; }
         }
+        @keyframes absorb-wave {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+        @keyframes drop-fall {
+            0%, 100% { transform: translateY(0); opacity: 1; }
+            40% { transform: translateY(12px); opacity: 1; }
+            50% { transform: translateY(12px); opacity: 0; }
+            90% { transform: translateY(0); opacity: 0; }
+        }
         @keyframes lift-arrows {
             0%, 100% { transform: translateY(0); opacity: 0.7; }
             50% { transform: translateY(-8px); opacity: 1; }
@@ -621,6 +631,48 @@
                     *Individual results may vary. Photos represent typical results after 4-8 weeks of consistent use.
                 </p>
             </div>
+
+            <!-- Customers Can't Get Enough -->
+            <div class="mt-16 fade-in">
+                <div class="text-center mb-12">
+                    <h3 class="font-sans text-2xl md:text-3xl font-bold text-charcoal-900 tracking-wide uppercase">Customers</h3>
+                    <p class="font-serif text-2xl md:text-3xl italic text-charcoal-800">can't get enough</p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                    <!-- Before/After Images -->
+                    <div class="flex gap-4 flex-1">
+                        <!-- Before -->
+                        <div class="relative flex-1">
+                            <img src="assets/neck-before.png" alt="Before using Elevé" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+                            <span class="absolute top-4 right-4 bg-cream-100 text-charcoal-800 text-sm font-medium px-4 py-1 rounded-full">Before</span>
+                        </div>
+                        <!-- After -->
+                        <div class="relative flex-1">
+                            <img src="assets/neck-after.png" alt="After 8 weeks with Elevé" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+                            <span class="absolute top-4 right-4 bg-gold-500 text-white text-sm font-medium px-4 py-1 rounded-full">After 8 weeks</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="flex-1 max-w-sm text-center lg:text-left">
+                        <div class="flex justify-center lg:justify-start text-gold-500 mb-4">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-charcoal-800 text-lg mb-6">"My absolute holy grail product. This gave me back my confidence as a 57 year old. My neck literally looks a decade younger!"</p>
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Eileen" class="w-12 h-12 rounded-full object-cover border-2 border-gold-500">
+                            <span class="font-semibold text-charcoal-900">Eileen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center mt-8 text-charcoal-800/50 text-sm">Consumer results, may vary</p>
+            </div>
         </div>
     </section>
 
@@ -779,8 +831,24 @@
             <div class="grid md:grid-cols-2 gap-6" id="timeline-grid">
                 <!-- Day 1 -->
                 <div class="timeline-card bg-cream-50 rounded-2xl overflow-hidden flex transition-shadow">
-                    <div class="w-1/3 bg-gradient-to-br from-gold-400/20 to-cream-200 overflow-hidden">
-                        <img src="assets/product-image.png" alt="Elevé cream" class="timeline-image w-full h-full object-cover">
+                    <div class="w-1/3 bg-gradient-to-br from-gold-400/20 to-cream-200 overflow-hidden flex items-center justify-center p-6">
+                        <!-- Animated: Cream application/absorption -->
+                        <div class="relative w-full h-full flex items-center justify-center">
+                            <svg class="w-24 h-24" viewBox="0 0 100 100" fill="none">
+                                <!-- Cream tube/jar -->
+                                <rect x="30" y="35" width="40" height="45" rx="5" fill="#D4A853" stroke="#B8862D" stroke-width="2"/>
+                                <rect x="35" y="28" width="30" height="12" rx="3" fill="#C9963C" stroke="#B8862D" stroke-width="1.5"/>
+                                <!-- Label -->
+                                <rect x="35" y="45" width="30" height="20" rx="2" fill="#FDF8F0"/>
+                                <text x="50" y="58" text-anchor="middle" fill="#B8862D" font-size="6" font-weight="bold">ELEVÉ</text>
+                                <!-- Absorption waves emanating -->
+                                <circle cx="50" cy="55" r="28" stroke="#D4A853" stroke-width="1" fill="none" opacity="0.3" style="animation: absorb-wave 2s ease-out infinite;"/>
+                                <circle cx="50" cy="55" r="35" stroke="#D4A853" stroke-width="1" fill="none" opacity="0.2" style="animation: absorb-wave 2s ease-out infinite 0.5s;"/>
+                                <circle cx="50" cy="55" r="42" stroke="#D4A853" stroke-width="1" fill="none" opacity="0.1" style="animation: absorb-wave 2s ease-out infinite 1s;"/>
+                                <!-- Droplet -->
+                                <ellipse cx="50" cy="20" rx="4" ry="5" fill="#D4A853" style="animation: drop-fall 2.5s ease-in-out infinite;"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="w-2/3 p-6">
                         <span class="timeline-badge inline-block bg-gold-500 text-white text-sm font-bold px-3 py-1 rounded mb-4">DAY 1</span>
